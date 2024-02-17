@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+
+    <title>Weather_report@amitSharma45</title>
+</head>
+<body>
+    <div class="main-div">
+        <div class="search-box">
+            <input type="text" id="city-name" placeholder="Enter Location">
+            <button type="button" class="btnLoc" onclick="sub()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="Loc">
+            <i class="fa-solid fa-location-dot fa-shake"></i>
+            <p id="location">Location</p>
+        </div>
+        <div class="temp-data">
+            <div class="temp-data-main">
+                <div id="imgMain"></div>
+                <p id="temp">---</p>
+            </div>
+                <p id="cond">Condition</p>
+                <p id="date-time">Date Time</p>
+        </div>
+        <div class="four-part">
+            <div class="wind four-part-data">
+                <i class="fa-solid fa-wind fa-fade"></i>
+                <p id="wind">---</p>
+                <p class="title">Wind</p>
+            </div>
+            <div class="cloud four-part-data">
+                <i class="fa-solid fa-cloud fa-beat-fade"></i>
+                <p id="cloud">---</p>
+                <p class="title">Cloud</p>
+            </div>
+            <div class="humidity four-part-data">
+                <i class="fa-solid fa-droplet"></i>
+                <p id="humidity">---</p>
+                <p class="title">Humidity</p>
+            </div>
+            <div class="rain four-part-data">
+                <i class="fa-solid fa-cloud-rain fa-shake"></i>
+                <p id="rain">---</p>
+                <p class="title">Chance of rain</p>
+            </div>
+        </div>
+        <div class="hour-for">
+            <div id="firstDay"></div>
+            <div id="secondDay"></div>
+        </div>
+        <div id="future-day-forecast"></div>
+    </div>
+</body>
+<script src="index.js"></script>
+<!-- <script>
+    
+
+
+//     function sub(){
+//    const apiKey = "e952998f02914e94b8e54953241602"
+//    const apiUrl = "api.weatherapi.com/v1/forecast.json"
+// //    const apiUrl = api.weatherapi.com/v1/forecast.json?key=e952998f02914e94b8e54953241602&q=mumbai&days=3
+// let cityName = document.getElementById("city-name").value
+
+//         if (cityName != "") {
+//             const  urlWithParams = `${apiUrl}?key=${apiKey}&q=${encodeURIComponent(cityName)}&days=14&aqi=no&alerts=no`;
+        
+//         async function fetchData() {
+//             try{
+//                 const response = await fetch(urlWithParams);
+//                     const value1 = await response.json();
+//                     // console.log(value1);
+//                     document.getElementById("location").innerHTML = `${value1.location.name}, ${value1.location.region}, ${value1.location.country}`
+//                 document.getElementById("cond").innerHTML = value1.current.condition.text
+//                 document.getElementById("imgMain").innerHTML = `<img src="${value1.current.condition.icon}">`
+//                 document.getElementById("temp").innerHTML = `${Math.round(value1.current.temp_c)}<span class="celcius">\u00B0C</span>`
+//             }
+//             catch (error) {
+//                 console.log("Error:", error);
+//                 alert("Invalid Location")
+//             }
+            
+//         }
+//         fetchData();
+//     }
+//     else {
+//         alert("Please enter some location")
+//     }
+//     }
+</script> -->
+</html>
